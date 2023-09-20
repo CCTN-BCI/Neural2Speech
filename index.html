@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+
+<article>
+  <header>
+  <h1>Neural2Speech: A Transfer Learning Framework for Neural-Driven Speech Reconstruction</h1>
+  </header>
+</article>
+
+
+<div><b>Abstract:</b> Reconstructing natural speech from neural activity is vital for enabling direct communication via brain-computer interfaces. Previous efforts have explored the conversion of neural recordings into speech using complex deep neural network (DNN) models trained on extensive neural recording data, which is resource-intensive under regular clinical constraints. However, achieving satisfactory performance in reconstructing speech from limited-scale neural recordings has been challenging, mainly due to the complexity of speech representations and the neural data constraints. To overcome these challenges, we propose a novel transfer learning framework for neural-driven speech reconstruction, called Neural2Speech, which consists of two distinct training phases. First, a speech autoencoder is pre-trained on readily available speech corpora to decode speech waveforms from the encoded speech representations. Second, a lightweight adaptor is trained on the small-scale neural recordings to align the neural activity and the speech representation for decoding. Remarkably, our proposed Neural2Speech demonstrates the feasibility of neural-driven speech reconstruction even with only 20 minutes of intracranial data, which significantly outperforms existing baseline methods in terms of speech fidelity and intelligibility.
+</div>
+
+<head>
+<meta charset="UTF-8">
+<title>Speech Demo</title>
+</head>
+
+<body>
+  
+
+<!--<h3>1. Mandarin demos 4  2 </h3></a>-->
+
+<i>For this part, we demonstrate some natural and reconstructed speech.</i>
+
+   <p class="sample">
+
+      <div>Transcribed sentences: <font color="red">Look somewhere else.</font></div>
+    <blockquote>
+    <table>
+    <tr>
+    <td align=center width=300> Raw Speech </td><td align=center width=300> Resynthesized speech from the pre-trained speech autoencoder </td>  <td align=center width=300> MLP regression results </td> <td align=center width=300> LSTM-CNN regression results </td>  <td align=center width=300> Neural-driven reconstructed speech </td>   
+    </tr>
+    <tr>
+    <td rowspan=2><audio src="speech_waveform/gt/0_rec.wav" controls=""></audio></td>
+    <td rowspan=2><audio src="speech_waveform/speech_autoencoder/0_rec.wav" controls=""></audio></td>
+    <td rowspan=2><audio src="speech_waveform/mlp/0_rec.wav" controls=""></audio></td>  
+    <td rowspan=2><audio src="speech_waveform/unlockGAN/0_rec.wav" controls=""></audio></td>  
+    <td rowspan=2><audio src="speech_waveform/Neural2Speech/0_rec.wav" controls=""></audio></td>  
+
+    </tr>
+    </table>   
+    </blockquote>   
+
+      <div>Transcribed sentences: <font color="red">It is well liked by the children and faculty.</font></div>
+    <blockquote>
+    <table>
+    <tr>
+    <td align=center width=300> Raw Speech </td><td align=center width=300> Resynthesized speech from the pre-trained speech autoencoder </td>  <td align=center width=300> MLP regression results </td> <td align=center width=300> LSTM-CNN regression results </td>  <td align=center width=300> Neural-driven reconstructed speech </td> 
+    </tr>
+    <tr>
+    <td rowspan=2><audio src="speech_waveform/gt/2_rec.wav" controls=""></audio></td>
+    <td rowspan=2><audio src="speech_waveform/speech_autoencoder/2_rec.wav" controls=""></audio></td>
+    <td rowspan=2><audio src="speech_waveform/mlp/2_rec.wav" controls=""></audio></td>  
+    <td rowspan=2><audio src="speech_waveform/unlockGAN/2_rec.wav" controls=""></audio></td>  
+    <td rowspan=2><audio src="speech_waveform/Neural2Speech/2_rec.wav" controls=""></audio></td>  
+
+
+    </tr>
+    </table>   
+    </blockquote>   
+
+      <div>Transcribed sentences: <font color="red">OK, take the tray.</font></div>
+    <blockquote>
+    <table>
+    <tr>
+    <td align=center width=300> Raw Speech </td><td align=center width=300> Resynthesized speech from the pre-trained speech autoencoder </td>  <td align=center width=300> MLP regression results </td> <td align=center width=300> LSTM-CNN regression results </td>  <td align=center width=300> Neural-driven reconstructed speech </td> 
+    </tr>
+    <tr>
+    <td rowspan=2><audio src="speech_waveform/gt/9_rec.wav" controls=""></audio></td>
+    <td rowspan=2><audio src="speech_waveform/speech_autoencoder/9_rec.wav" controls=""></audio></td>
+    <td rowspan=2><audio src="speech_waveform/mlp/9_rec.wav" controls=""></audio></td>  
+    <td rowspan=2><audio src="speech_waveform/unlockGAN/9_rec.wav" controls=""></audio></td>  
+    <td rowspan=2><audio src="speech_waveform/Neural2Speech/9_rec.wav" controls=""></audio></td> 
+
+    </tr>
+    </table>   
+    </blockquote>   
+
+      <div>Transcribed sentences: <font color="red">We are here to transact business.</font></div>
+    <blockquote>
+    <table>
+    <tr>
+    <td align=center width=300> Raw Speech </td><td align=center width=300> Resynthesized speech from the pre-trained speech autoencoder </td>  <td align=center width=300> MLP regression results </td> <td align=center width=300> LSTM-CNN regression results </td>  <td align=center width=300> Neural-driven reconstructed speech </td> 
+    </tr>
+    <tr>
+    <td rowspan=2><audio src="speech_waveform/gt/18_rec.wav" controls=""></audio></td>
+    <td rowspan=2><audio src="speech_waveform/speech_autoencoder/18_rec.wav" controls=""></audio></td>
+    <td rowspan=2><audio src="speech_waveform/mlp/18_rec.wav" controls=""></audio></td>  
+    <td rowspan=2><audio src="speech_waveform/unlockGAN/18_rec.wav" controls=""></audio></td>  
+    <td rowspan=2><audio src="speech_waveform/Neural2Speech/18_rec.wav" controls=""></audio></td> 
+
+    </tr>
+    </table>   
+    </blockquote>   
+
+      <div>Transcribed sentences: <font color="red">The moment of truth is the moment of crisis.</font></div>
+    <blockquote>
+    <table>
+    <tr>
+    <td align=center width=300> Raw Speech </td><td align=center width=300> Resynthesized speech from the pre-trained speech autoencoder </td>  <td align=center width=300> MLP regression results </td> <td align=center width=300> LSTM-CNN regression results </td>  <td align=center width=300> Neural-driven reconstructed speech </td> 
+    </tr>
+    <tr>
+    <td rowspan=2><audio src="speech_waveform/gt/7_rec.wav" controls=""></audio></td>
+    <td rowspan=2><audio src="speech_waveform/speech_autoencoder/7_rec.wav" controls=""></audio></td>
+    <td rowspan=2><audio src="speech_waveform/mlp/7_rec.wav" controls=""></audio></td>  
+    <td rowspan=2><audio src="speech_waveform/unlockGAN/7_rec.wav" controls=""></audio></td>  
+    <td rowspan=2><audio src="speech_waveform/Neural2Speech/7_rec.wav" controls=""></audio></td>  
+
+    </tr>
+    </table>   
+    </blockquote>   
+
+
+
+  </p>    
+  
+ </body>
+</html>
