@@ -25,4 +25,4 @@ Here is the [speech demo link](https://cctn-bci.github.io/Neural2Speech/).
 - `reconstruction.py`: Code for adaptor training (training phase 2)
 
 ## Copyright
-To clarify ownership of this work, it is hereby stated that the copyright belongs to Jiawei Li.
+To clarify ownership of this work, it is hereby stated that the copyright belongs to Jiawei Li. This work is supported by NSFC General Program 32371154 and Shanghai Pujiang Program 22PJ1410500. Correspondence to: Yuanning Li (liyn2@shanghaitech.edu.cn).
