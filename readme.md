@@ -3,6 +3,7 @@
 Jiawei Li, Chunxu Guo, Li Fu, Lu Fan, Edward F. Chang, Yuanning Li
 
 [Neural2Speech: A Transfer Learning Framework for Neural-Driven Speech Reconstruction](https://ieeexplore.ieee.org/document/10446614)
+
 [Natural speech re-synthesis from direct cortical recordings using pre-trained encoder-decoder framework (to be uploaded into BioArxiv)]
 
 ## A demo page of speech waveforms
@@ -27,8 +28,11 @@ Here is the [speech demo link](https://cctn-bci.github.io/Neural2Speech/).
 
 ## Temporal landmark detection and automatic phoneme recognition
 Temporal landmark detection and automatic phoneme recognition can be effectively implemented using Hugging Face's tools and libraries. You can find more information and resources on their official website: [Hugging Face](https://huggingface.co).
+
 In our study, onset detectors act as binary classifiers that identify the presence or absence of phoneme, syllable, or word onsets in speech. These classifiers analyze fixed-length segments of speech waveforms, using 0.04 seconds for phonemes and 0.2 seconds for syllables and words. The output is a scalar value between 0 and 1, indicating the probability of a temporal landmark's existence.
+
 To tackle the challenge of imbalanced datasets, we applied data augmentation techniques during training, such as volume adjustments, speed alterations, pitch shifts, and the addition of Gaussian noise. Both positive and negative speech segments were sampled equally at 5000 instances for the onset detector. This approach helped to reduce potential biases arising from the uneven distribution of samples.
+
 For quantitative evaluation of synthesized speech, we trained a phoneme recognizer that utilizes Wav2Vec2.0 as a feature extractor, along with a logistic regression classifier and a phoneme decoder. Similar to the onset detection process, the classifier generates a probability vector based on Wav2Vec2.0 features. The phoneme decoder then translates these probability vectors into a phoneme sequence, allowing us to accurately recognize phonemes.
 
 ## Copyright
