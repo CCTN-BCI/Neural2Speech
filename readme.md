@@ -4,7 +4,7 @@ Jiawei Li, Chunxu Guo, Li Fu, Lu Fan, Edward F. Chang, Yuanning Li
 
 [Neural2Speech: A Transfer Learning Framework for Neural-Driven Speech Reconstruction](https://ieeexplore.ieee.org/document/10446614)
 
-[Natural speech re-synthesis from direct cortical recordings using pre-trained encoder-decoder framework (to be uploaded into BioArxiv)]
+[Natural speech re-synthesis from direct cortical recordings using pre-trained encoder-decoder framework](https://www.biorxiv.org/content/10.1101/2024.12.16.628596v1)
 
 ## A demo page of speech waveforms
 This webpage showcases the results of a research project investigating neural activity reconstruction for speech. It features five sets of WAV files, each containing five recordings of the same sentence, including the original speech, re-synthesized by an autoencoder, and reconstructions produced in various ways from neural activity.
